@@ -24,6 +24,12 @@ jobs:
         with:
           node-version: 20
 
+      - name: Release
+        env:
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release --dry-run --no-ci
+
       - name: Install and Build
         run: |
           npm install

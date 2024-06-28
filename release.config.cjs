@@ -61,6 +61,11 @@ module.exports = {
         }
       ],
       "@semantic-release/changelog",
-      "@semantic-release/github"
+      "@semantic-release/github",
+      ["@semantic-release/exec",
+        {
+          "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+        }
+      ]
   ],
 };
