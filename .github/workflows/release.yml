@@ -38,6 +38,6 @@ jobs:
         run: |
           ./node_modules/@markwylde/ftp-deploy/index.js .github/workflows/deployConfig.js
         env:
-          FTP_HOSTNAME: ${{ secrets.ftp_server }}
+          FTP_HOSTNAME: ${{ vars.ftp_server }}
           FTP_USERNAME: ${{ vars.ftp_username }}
-          FTP_PASSWORD: ${{ vars.ftp_password }}
+          FTP_PASSWORD: ${{ secrets.ftp_password }}
