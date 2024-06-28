@@ -9,7 +9,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    environment: production
+    environment: Production
     permissions:
       contents: write
       issues: write
@@ -39,6 +39,6 @@ jobs:
         run: |
           ./node_modules/@markwylde/ftp-deploy/index.js .github/workflows/deployConfig.js
         env:
-          FTP_HOSTNAME: ${{ vars.ftp_server }}
-          FTP_USERNAME: ${{ vars.ftp_username }}
-          FTP_PASSWORD: ${{ secrets.ftp_password }}
+          FTP_HOSTNAME: ${{ vars.FTP_SERVER }}
+          FTP_USERNAME: ${{ vars.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
