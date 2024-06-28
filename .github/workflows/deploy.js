@@ -36,7 +36,7 @@ async function deploy () {
   });
 
 
-  await purgeCache('webcodeup.com');
+  await purgeCache('editor.researcho.com');
 }
 
 deploy();
