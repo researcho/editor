@@ -46,7 +46,7 @@ jobs:
 
       - name: Sync production
         run: |
-          ./node_modules/@markwylde/ftp-deploy/index.js .github/workflows/deployConfig.js
+          node .github/workflows/deploy.js
         env:
           FTP_HOSTNAME: ${{ vars.FTP_HOSTNAME }}
           FTP_USERNAME: ${{ vars.FTP_USERNAME }}
